@@ -13,6 +13,8 @@ export default {
         gray: "#F4F4F4",
         purple: "#4A00FF",
         lila: "#DEDEFF",
+        "light-gray": "#D8D8D8",
+        "cool-gray": "#9CA3AF",
       },
     },
   },

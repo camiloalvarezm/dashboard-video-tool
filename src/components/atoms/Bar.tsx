@@ -8,6 +8,7 @@ const Bar = ({ bgColor, fillColor, value }: BarProps) => {
   const barStyle = {
     width: `${value}%`,
   };
+
   return (
     <>
       <div className={`w-full h-2 rounded-full bg-${bgColor}`}>
