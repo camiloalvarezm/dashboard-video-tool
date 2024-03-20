@@ -12,6 +12,7 @@ export default {
       colors: {
         gray: "#F4F4F4",
         purple: "#4A00FF",
+        lila: "#DEDEFF",
       },
     },
   },
