@@ -1,11 +1,18 @@
 interface CardProps {
   children: React.ReactNode;
+  color: string;
+  height?: string;
+  overflow?: boolean;
 }
 
-const Card = ({ children }: CardProps) => {
+const Card = ({ children, color, height, overflow }: CardProps) => {
   return (
     <>
-      <div className="border w-full bg-white h-full p-5 rounded-lg overflow-auto">
+      <div
+        className={`w-full p-5 rounded-2xl bg-${color} ${height} ${
+          overflow && "overflow-auto"
+        }`}
+      >
         {children}
       </div>
     </>

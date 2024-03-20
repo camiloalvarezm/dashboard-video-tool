@@ -17,11 +17,13 @@ const BarDetails = ({
 }: BarProps) => {
   return (
     <>
-      <div className="w-full flex flex-flow justify-between mb-1">
-        <span>{title}</span>
-        <span className="text-sm">{details}</span>
+      <div>
+        <div className="w-full flex flex-flow justify-between items-baseline mb-1">
+          <span style={{ fontSize: "12px" }}>{title}</span>
+          <span style={{ fontSize: "10px" }}>{details}</span>
+        </div>
+        <Bar bgColor={barBgColor} fillColor={barFillColor} value={barValue} />
       </div>
-      <Bar bgColor={barBgColor} fillColor={barFillColor} value={barValue} />
     </>
   );
 };
