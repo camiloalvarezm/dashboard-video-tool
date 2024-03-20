@@ -1,4 +1,3 @@
-import Bar from "./components/atoms/Bar";
 import MainTemplate from "./components/templates/MainTemplate";
 
 const DashboardVideoToolApp = () => {
