@@ -13,12 +13,12 @@ const NavBar = () => {
           <ul>
             {MENU_OPTIONS.map((listItem: ListItem, index: number) => (
               <li
-                className={`text-sm py-3 px-3 mb-3 cursor-pointer rounded-md ${
+                className={`text-md py-3 px-3 mb-4 cursor-pointer rounded-md ${
                   listItem.active ? "text-white bg-purple" : "hover:bg-gray"
                 }`}
                 key={index}
               >
-                <FontAwesomeIcon icon={listItem.iconName} className="me-3" />
+                <FontAwesomeIcon icon={listItem.iconName} className="ms-3 me-6" size="lg"/>
                 {listItem.name}
               </li>
             ))}
