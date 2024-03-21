@@ -9,9 +9,9 @@ const Card = ({ children, color, height, overflow }: CardProps) => {
   return (
     <>
       <div
-        className={`w-full p-5 rounded-2xl bg-${color} ${height} ${
+        className={`w-full p-5 rounded-2xl ${height} ${
           overflow && "overflow-auto"
-        }`}
+        } bg-${color}`}
       >
         {children}
       </div>

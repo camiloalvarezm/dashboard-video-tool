@@ -12,7 +12,7 @@ interface MainTemplateProps {
 const MainTemplate = ({ children }: MainTemplateProps) => {
   return (
     <>
-      <div className="h-screen flex flex-col gap-10 justify-center items-center lg:hidden border p-7">
+      <div className="h-screen flex flex-col gap-10 justify-center items-center lg:hidden p-7">
         <img
           src={videoToolLogo}
           alt="video-tool-logo"
