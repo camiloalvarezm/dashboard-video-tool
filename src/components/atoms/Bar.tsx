@@ -11,7 +11,7 @@ const Bar = ({ bgColor, fillColor, value }: BarProps) => {
 
   return (
     <>
-      <div className={`w-full h-2 rounded-full bg-${bgColor}`}>
+      <div className={`w-full h-1.5 rounded-full bg-lila bg-${bgColor}`}>
         <div
           className={`h-full rounded-full bg-${fillColor}`}
           style={barStyle}

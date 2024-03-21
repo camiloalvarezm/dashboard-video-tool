@@ -3,6 +3,7 @@ import Tabs from "../components/molecules/Tabs";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import TABS_OPTIONS from "../utils/statics/tabs";
 import Table from "../components/organisms/Table";
+import LIBRARY_TABLE_DATA from "../utils/statics/library-table-data";
 
 const LibraryPage = () => {
   return (
@@ -18,7 +19,10 @@ const LibraryPage = () => {
                 iconName={faSearch}
               />
             </div>
-            <Table />
+            <Table
+              headers={LIBRARY_TABLE_DATA.headers}
+              data={LIBRARY_TABLE_DATA.data}
+            />
           </div>
         </Tabs>
       </div>

@@ -1,27 +1,5 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
-
-export interface TableModel {
-  headers: Header[];
-  data: Data[];
-}
-
-export interface Header {
-  title?: string;
-  value: string;
-  selectable?: boolean;
-  width?: string;
-}
-
-export interface Data {
-  name: string;
-  size: string;
-  videos?: string;
-  duration: string;
-  lastModified: string;
-  iconName?: IconDefinition;
-  selectable?: boolean;
-}
+import { TableModel } from "../../models/table-model";
 
 const FOLDER_TABLE_DATA: TableModel = {
   headers: [
