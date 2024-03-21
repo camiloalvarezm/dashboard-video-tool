@@ -14,7 +14,12 @@ const Table = ({ headers, data }: TableProps) => {
         <thead>
           <tr>
             {headers.map((header: Header, index: number) => (
-              <th className="border-b border-b-gray p-3" key={index}>
+              <th
+                className={`border-b border-b-gray p-3 ${
+                  header.value === "name" ? "text-left" : ""
+                }`}
+                key={index}
+              >
                 {header.selectable && <input type="checkbox" />}
                 {header.title || ""}
               </th>

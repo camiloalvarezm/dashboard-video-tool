@@ -31,10 +31,16 @@ const Button = ({
   return (
     <>
       <button
-        className={`${btnSize} bg-${color} text-${textColor}`}
+        className={`${btnSize} bg-${color} text-${textColor} hover:bg-${color}/50`}
         onClick={onClickButton}
       >
-        {iconName && <FontAwesomeIcon icon={iconName} className="me-3" />}
+        {iconName && (
+          <FontAwesomeIcon
+            icon={iconName}
+            className={`${title !== "" ? "me-3" : ""}`}
+            size="xl"
+          />
+        )}
         {title}
       </button>
     </>

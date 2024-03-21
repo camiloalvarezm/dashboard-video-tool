@@ -1,13 +1,13 @@
 import MainTemplate from "./components/templates/MainTemplate";
+import FolderPage from "./pages/FolderPage";
 import LibraryPage from "./pages/LibraryPage";
 
 const DashboardVideoToolApp = () => {
-
-
   return (
     <>
       <MainTemplate>
-        <LibraryPage />
+        {/* <LibraryPage /> */}
+        <FolderPage />
       </MainTemplate>
     </>
   );
