@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LIBRARY_TABLE_DATA, {
   Header,
   Data,
-} from "../../utils/statics/library-table-data";
+} from "../../utils/statics/folder-table-data";
 
 const Table = () => {
   return (
@@ -28,7 +28,9 @@ const Table = () => {
                     key={colIndex}
                     className={`${
                       header.value !== "name" ? "text-center" : ""
-                    } border-b border-b-gray p-3 cursor-pointer ${header.width}`}
+                    } border-b border-b-gray p-3 cursor-pointer ${
+                      header.width
+                    }`}
                   >
                     {header.selectable ? (
                       <input type="checkbox" checked={row.selectable} />
@@ -38,6 +40,7 @@ const Table = () => {
                           <FontAwesomeIcon
                             icon={row.iconName}
                             className="me-3 text-purple"
+                            size="lg"
                           />
                         )}
                         {row.name}
@@ -48,6 +51,8 @@ const Table = () => {
                       row.size
                     ) : header.value === "lastModified" ? (
                       row.lastModified
+                    ) : header.value === "duration" ? (
+                      row.duration
                     ) : null}
                   </td>
                 )

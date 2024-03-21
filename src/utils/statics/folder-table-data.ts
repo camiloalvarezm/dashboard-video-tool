@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
+import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 
 export interface TableModel {
   headers: Header[];
@@ -15,15 +15,15 @@ export interface Header {
 
 export interface Data {
   name: string;
-  duration?: string;
-  videos: number;
   size: string;
+  videos?: string;
+  duration: string;
   lastModified: string;
   iconName?: IconDefinition;
   selectable?: boolean;
 }
 
-const LIBRARY_TABLE_DATA: TableModel = {
+const FOLDER_TABLE_DATA: TableModel = {
   headers: [
     {
       selectable: true,
@@ -36,13 +36,14 @@ const LIBRARY_TABLE_DATA: TableModel = {
       width: "w-2/4",
     },
     {
-      title: "Videos",
-      value: "videos",
-    },
-    {
       title: "Tamaño",
       value: "size",
     },
+    {
+      title: "Duración",
+      value: "duration",
+    },
+
     {
       title: "Última modificación",
       value: "lastModified",
@@ -50,76 +51,76 @@ const LIBRARY_TABLE_DATA: TableModel = {
   ],
   data: [
     {
-      name: "Afiliado Master",
-      videos: 8,
+      name: "Entrenamiento.mp4",
       size: "7.3 GB",
+      duration: "04:11:37",
       lastModified: "30/may/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "BeMaster",
-      videos: 21,
+      name: "Salida-al-mercado-versión nueva.mp4",
       size: "1.4 GB",
+      duration: "47:55",
       lastModified: "22/jun/2022",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Comizzión",
-      videos: 10,
+      name: "Como-cerrar-una-venta.mp4",
       size: "284 MB",
+      duration: "10:12",
       lastModified: "11/sep/2021",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Creador de Contenido",
-      videos: 2,
+      name: "Crea-un-ticket-valioso.mp4",
       size: "4.3 GB",
+      duration: "03:50:22",
       lastModified: "21/jun/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Exportados Wil",
-      videos: 14,
+      name: "Conquista-el-mercado-digital.mp4",
       size: "500 MB",
+      duration: "5:00",
       lastModified: "5/abr/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Afiliado Master",
-      videos: 6,
+      name: "Entrenamiento.mp4",
       size: "7.3 GB",
+      duration: "04:11:37",
       lastModified: "30/may/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "BeMaster",
-      videos: 30,
+      name: "Salida-al-mercado-versión nueva.mp4",
       size: "1.4 GB",
+      duration: "47:55",
       lastModified: "22/jun/2022",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Comizzión",
-      videos: 2,
+      name: "Como-cerrar-una-venta.mp4",
       size: "284 MB",
+      duration: "10:12",
       lastModified: "11/sep/2021",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Creador de Contenido",
-      videos: 8,
+      name: "Crea-un-ticket-valioso.mp4",
       size: "4.3 GB",
+      duration: "03:50:22",
       lastModified: "21/jun/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
     {
-      name: "Exportados Wil",
-      videos: 14,
+      name: "Conquista-el-mercado-digital.mp4",
       size: "500 MB",
+      duration: "5:00",
       lastModified: "5/abr/2023",
-      iconName: faFolder,
+      iconName: faCirclePlay,
     },
   ],
 };
 
-export default LIBRARY_TABLE_DATA;
+export default FOLDER_TABLE_DATA;
