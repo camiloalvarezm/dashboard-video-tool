@@ -1,4 +1,5 @@
 import MainTemplate from "./components/templates/MainTemplate";
+import LibraryPage from "./pages/LibraryPage";
 
 const DashboardVideoToolApp = () => {
 
@@ -6,7 +7,7 @@ const DashboardVideoToolApp = () => {
   return (
     <>
       <MainTemplate>
-        router
+        <LibraryPage />
       </MainTemplate>
     </>
   );

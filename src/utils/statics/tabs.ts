@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 export interface Tab {
@@ -11,7 +11,7 @@ export interface Tab {
 const TABS_OPTIONS: Tab[] = [
   {
     title: "Biblioteca",
-    iconName: faBook,
+    iconName: faBarsStaggered,
     active: true,
   },
   {

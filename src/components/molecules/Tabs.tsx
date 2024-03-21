@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../atoms/Button";
 import { faFolder, faCirclePlay } from "@fortawesome/free-regular-svg-icons";
-import { Item } from "../../utils/statics/tabs";
+import { Tab } from "../../utils/statics/tabs";
 
 interface TabsProps {
-  elements: Item[];
+  elements: Tab[];
   children: React.ReactNode;
 }
 
@@ -13,7 +13,7 @@ const Tabs = ({ elements, children }: TabsProps) => {
     <>
       <div className="flex flex-row justify-between mb-4">
         <div className="flex flex-row gap-10">
-          {elements.map((element: Item, index: number) => (
+          {elements.map((element: Tab, index: number) => (
             <span
               className={`borde text-base cursor-pointer flex flex-row items-end ${
                 element.active && "text-purple border-b-2 border-purple"
