@@ -1,13 +1,12 @@
 import MainTemplate from "./components/templates/MainTemplate";
-import FolderPage from "./pages/FolderPage";
-import LibraryPage from "./pages/LibraryPage";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
 
 const DashboardVideoToolApp = () => {
   return (
     <>
       <MainTemplate>
-        {/* <LibraryPage /> */}
-        <FolderPage />
+        <RouterProvider router={router} />
       </MainTemplate>
     </>
   );
