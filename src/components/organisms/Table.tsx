@@ -1,6 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Header, Data } from "../../models/table-model";
+import { useNavigate } from "react-router-dom";
 
 interface TableProps {
   headers: Header[];
@@ -8,6 +9,11 @@ interface TableProps {
 }
 
 const Table = ({ headers, data }: TableProps) => {
+  const navigate = useNavigate();
+  const navigateTo = (value: any) => {
+    if (value !== "selectable") navigate("/videos/be-master");
+  };
+
   return (
     <>
       <table className="w-full text-sm">
@@ -35,6 +41,7 @@ const Table = ({ headers, data }: TableProps) => {
                   className={`${
                     header.value !== "name" ? "text-center" : ""
                   } border-b border-b-gray p-3 cursor-pointer ${header.width}`}
+                  onClick={() => navigateTo(header.value)}
                 >
                   {header.selectable ? (
                     <input type="checkbox" checked={row.selectable} />
